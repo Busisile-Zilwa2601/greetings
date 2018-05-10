@@ -3,9 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="greet.css">
+    <!--<link rel="stylesheet" href="skeleton.css">-->
   </head>
   <body>
+    <div class ="header">
+      <h1>Greetings</h1>
+    </div>
+    <div class="row">
+        <div class = "col-4">
+          <h3>Please enter your name </h3>
+          <textarea name="name" rows="20" cols="20" class="theName" ></textarea><span class = 'bigNumber'> 0 </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class ='col-2'>
+          <!--<h5>IsiXhosa</h5>-->
+          <label class="">
+            <input type="radio" name="language" class="languageSelected" value="isixhosa">
+            <span class="label-body">IsiXhosa</span>
+          </label>
+        </div>
+        <div class ='col-2'>
+          <!--<h5>English</h5>-->
+          <label class="">
+            <input type="radio" name="language" class="languageSelected" value="english">
+            <span class="label-body">English</span>
+          </label>
+        </div>
+        <div class ='col-2'>
+          <!--<h5>afrikaans</h5>-->
+          <label class="">
+            <input type="radio" name="language" class="languageSelected" value="afrikaans">
+            <span class="label-body">Afrikaans</span>
+          </label>
+        </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <button class="button-primary " on type="button" name="button" id = "me">Greet Me</button>
+      </div>
+    </div>
+    <div class="footer">
+        <p class = 'changeThis'></p>
+      </div>
   </body>
   <script src = 'greet.js' charset="utf-8"></script>
+  <script src = 'greet-dom.js' charset="utf-8"></script>
 </html>
