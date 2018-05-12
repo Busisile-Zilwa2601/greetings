@@ -1,5 +1,6 @@
 function Greet(){
   var temp = {};
+  var counter = 0;
   var nameEntry = function(name){
     if(name != ''){
       if(temp[name.toLowerCase()] === undefined){
@@ -10,11 +11,12 @@ function Greet(){
       }
       else{
         temp[name.toLowerCase()] += 1;
+        counter += 1;
       }
     }
   }
   var theGreetings = function(languageSelected, name){
-    if(name != ''){
+    if(name != '' && languageSelected != ''){
         if(languageSelected === 'english'){
           return 'Hello '+ name;
         }
@@ -25,7 +27,11 @@ function Greet(){
           return 'Hallo '+ name;
         }
     }
-    else{
+    else if(name != '' && languageSelected === ''){
+        return name + ' Please select a language';
+    }
+    else if(name === '' && languageSelected != '')
+    {
       if(languageSelected === 'english'){
         return "Please enter your name on the text box, select the language of your choice then press the \'Greet Me\'";
       }
@@ -36,8 +42,14 @@ function Greet(){
         return 'Voer asseblief jou naam in die tekskassie in, kies die taal van jou keuse en druk die knoppie Gree my.';
       }
     }
+    else{
+        return 'Please enter your name and select a language ';
+    }
   }
-  var sumObj = function(){
+  var getCounter = function(){
+    return counter;
+  }
+  var sumObj = function(temp){
     var sum = 0;
     for(var key in temp){
       if(temp.hasOwnProperty(key)){
@@ -48,7 +60,9 @@ function Greet(){
   }
   return{
     myName : nameEntry,
+    getcount : getCounter,
     myGreetings : theGreetings,
-    mySum : sumObj
+    mySum : sumObj,
+    objtemp: temp
   }
 }

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title></title>
     <meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="greet.css">
-    <!--<link rel="stylesheet" href="skeleton.css">-->
+    <link rel="stylesheet" href="css/greet.css">
+
   </head>
   <body>
     <div class ="header">
@@ -42,14 +42,17 @@
         </div>
     </div>
     <div class="row">
-      <div class="six columns">
+      <div class="col-4">
         <button class="button-primary " on type="button" name="button" id = "me">Greet Me</button>
+      </div>
+      <div class="col-6">
+        <button class="button-primary " on type="button" name="button" id = "reset">Reset</button>
       </div>
     </div>
     <div class="footer">
         <p class = 'changeThis'></p>
       </div>
   </body>
-  <script src = 'greet.js' charset="utf-8"></script>
-  <script src = 'greet-dom.js' charset="utf-8"></script>
+  <script src = 'js/greet.js' charset="utf-8"></script>
+  <script src = 'js/greet-dom.js' charset="utf-8"></script>
 </html>
