@@ -26,12 +26,11 @@ describe("the Greet function", function(){
     greet.myName('Nolupho');
     greet.myName('Odwa');
     greet.myName('odwa');
-    greet.myName('David');
     assert.deepEqual(greet.myGreetings('afrikaans', 'Busisile'), "Hallo Busisile");
     assert.deepEqual(greet.myGreetings('english', 'Odwa' ), "Hello Odwa");
     assert.deepEqual(greet.myGreetings('afrikaans', 'Nolupho' ), "Hallo Nolupho");
     assert.deepEqual(greet.myGreetings('', 'David'), "David Please select a language");
-    assert.deepEqual(greet.getcount(), 4);
+    assert.deepEqual(greet.getcount(), 3);
   });
   it("If no name is entered, but a language is selected, after pressing \'Greet Me\' ,It should return a message on the language you selected. ", function(){
     var greet = Greet();
