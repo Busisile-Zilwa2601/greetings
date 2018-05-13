@@ -43,9 +43,8 @@ describe("the Greet function", function(){
   });
   it("If a \'Busisile\' is entered, but a language is not selected, after pressing \'Greet Me\' ,It should return \'Busisile\' Please select a language. ", function(){
     var greet = Greet();
-    greet.myName('Busisile');
     assert.deepEqual(greet.myGreetings('', 'Busisile'), "Busisile Please select a language");
-    assert.deepEqual(greet.getcount(), 1);
+    assert.deepEqual(greet.getcount(), 0);
   });
   it("If no name is entered, a language is not selected, after pressing \'Greet Me\' ,It should return \'Please enter your name and select a language.\' ", function(){
     var greet = Greet();

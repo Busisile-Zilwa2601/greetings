@@ -28,15 +28,6 @@ function greetMeBtn(){
   }
   else{
     if(!checkRadioBtn){
-      greet.myName(theNameValue);
-      objNames = Object.assign(objNames, greet.objtemp);
-      //check if theres localStorage with key names
-      if(localStorage['names']){//true
-        num = greet.mySum(objNames);
-      }
-      else{ //this will be true the first time we greet, no localStorage at this point
-        num = greet.getcount();
-      }
       changeThis.innerHTML = greet.myGreetings('', theNameValue);
     }
   }
