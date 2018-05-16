@@ -27,6 +27,9 @@ function Greet(){
           return 'Hallo '+ name;
         }
     }
+    else if(Number.isNaN(Number(name)) && languageSelected ===''){
+      return name + ' please select a language';
+    }
     else if(name === "" && languageSelected != '')
     {
       if(languageSelected === 'english'){
