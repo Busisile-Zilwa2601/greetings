@@ -27,10 +27,7 @@ function Greet(){
           return 'Hallo '+ name;
         }
     }
-    else if(Number.isNaN(Number(name)) && languageSelected === ''){
-        return ' Please select a language';
-    }
-    else if(Number.isNaN(Number(name)) && languageSelected != '')
+    else if(name === "" && languageSelected != '')
     {
       if(languageSelected === 'english'){
         return "Please enter your name on the text box, select the language of your choice then press the \'Greet Me\'";
