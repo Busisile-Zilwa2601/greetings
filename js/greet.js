@@ -2,7 +2,7 @@ function Greet(){
   var temp = {};
   var counter = 0;
   var nameEntry = function(name){
-    if(name != ''){
+    if(name != '' && Number.isNaN(Number(name))){
       if(temp[name.toLowerCase()] === undefined){
         temp[name.toLowerCase()] = 0;
       }
@@ -16,7 +16,7 @@ function Greet(){
     }
   }
   var theGreetings = function(languageSelected, name){
-    if(name != '' && languageSelected != ''){
+    if(Number.isNaN(Number(name)) && languageSelected != ''){
         if(languageSelected === 'english'){
           return 'Hello '+ name;
         }
