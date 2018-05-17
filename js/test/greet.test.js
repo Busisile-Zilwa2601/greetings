@@ -29,7 +29,7 @@ describe("the Greet function", function(){
     assert.deepEqual(greet.myGreetings('afrikaans', 'Busisile'), "Hallo Busisile");
     assert.deepEqual(greet.myGreetings('english', 'Odwa' ), "Hello Odwa");
     assert.deepEqual(greet.myGreetings('afrikaans', 'Nolupho' ), "Hallo Nolupho");
-    assert.deepEqual(greet.myGreetings('', 'David'), "David Please select a language");
+    assert.deepEqual(greet.myGreetings('', 'David'), "David please select a language");
     assert.deepEqual(greet.getcount(), 3);
   });
   it("If no name is entered, but a language is selected, after pressing \'Greet Me\' ,It should return a message on the language you selected. ", function(){
@@ -40,9 +40,9 @@ describe("the Greet function", function(){
     assert.deepEqual(greet.myGreetings('isixhosa', '' ), "Nceda faka igama lakho kwibhokisi yombhalo, ukhethe ulwimi, uze ucinezele iqhosha lokubulisa. ");
     assert.deepEqual(greet.getcount(), 0);
   });
-  it("If a \'Busisile\' is entered, but a language is not selected, after pressing \'Greet Me\' ,It should return \'Busisile\' Please select a language. ", function(){
+  it("If a \'Busisile\' is entered, but a language is not selected, after pressing \'Greet Me\' ,It should return \'Busisile\' please select a language. The count will remain zero", function(){
     var greet = Greet();
-    assert.deepEqual(greet.myGreetings('', 'Busisile'), "Busisile Please select a language");
+    assert.deepEqual(greet.myGreetings('', 'Busisile'), "Busisile please select a language");
     assert.deepEqual(greet.getcount(), 0);
   });
   it("If no name is entered, a language is not selected, after pressing \'Greet Me\' ,It should return \'Please enter your name and select a language.\' ", function(){
